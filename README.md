@@ -1,7 +1,5 @@
 🚀 Welcome to the 100DaysOfCode Challenge Repository! 🚀
-<p align="center">
-  <img src="https://imgur.com/a/j38G74l" alt="100DaysOfCode Logo">
-</p>
+
 
 # 100DaysOfCode Challenge 🚀
 
