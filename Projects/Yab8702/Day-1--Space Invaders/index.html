@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Space Invaders</h1>
+    </header>
+    <div class="difficulty-buttons">
+      <button onclick="setDifficulty('easy')" class="easyButton">Easy</button>
+      <button onclick="setDifficulty('medium')" class="mediumButton">
+        Medium
+      </button>
+      <button onclick="setDifficulty('hard')" class="hardButton">Hard</button>
+    </div>
+    <h1 class="results">0</h1>
+    <div class="grid"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
