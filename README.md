@@ -26,7 +26,7 @@ The **100DaysOfCode Challenge** is a commitment to code for at least 1 hour ever
 ## Structure of the Repository
 
 - 📁 **[log.md](log.md):** Your daily log where you record your progress.
-- 📁 **[projects/](projects):** Folder to house your individual coding projects.
+- 📁 **[projects/](Projects):** Folder to house your individual coding projects.
 
 ## Let's Inspire Each Other! 🌈
 
