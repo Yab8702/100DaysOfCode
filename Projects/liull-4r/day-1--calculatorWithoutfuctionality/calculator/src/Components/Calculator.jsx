@@ -33,6 +33,7 @@ function Calculator() {
         <div>
           <button className="zero">0</button>
           <button className="dot">.</button>
+          <button>NEG</button>
           <button className="yellow">=</button>
         </div>
       </div>
