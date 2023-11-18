@@ -23,7 +23,9 @@ function Calculator() {
   const evaluateExpression = () => {
     try {
       const result = eval(expression);
-      setExpression(result.toString());
+      setExpression(
+        (prevExpression) => prevExpression + ` = ${result.toString()}`
+      );
     } catch (error) {
       setExpression("Error");
     }
@@ -34,9 +36,7 @@ function Calculator() {
   };
   const handleNegative = () => {
     setExpression("");
-    setExpression((prevExpression) => {
-      return `-${prevExpression}`;
-    });
+    setExpression((prevExpression) => `-${prevExpression}`);
   };
 
   const handleDelete = () => {
