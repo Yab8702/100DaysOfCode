@@ -16,4 +16,3 @@ React: Utilized for building the user interface and managing application state.
 CSS: Custom styling for the calculator layout and design.
 
 
-CSS: Custom styling for the calculator layout and design.
