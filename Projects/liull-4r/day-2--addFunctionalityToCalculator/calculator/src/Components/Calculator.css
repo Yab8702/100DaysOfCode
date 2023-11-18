@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin: 0 0 4rem 0;
+  font-weight: 500;
+  background-color: #220d4b;
+  padding: 1.5rem;
+}
+
+.calculator-wrapper {
+  width: 34.375rem; /* Converted from 550px to rem */
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10rem;
+  border: 0.0625rem solid #ccc; /* Converted from 1px to rem */
+  border-radius: 3rem; /* Converted from 25px to rem */
+  color: white;
+  background-color: #000000;
+}
+
+button {
+  border: none;
+  margin: 1rem 1rem;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+}
+
+.first {
+  background-color: #212121;
+  padding: 0.8125rem 0.625rem; /* Converted from 13px 10px to rem */
+  border-radius: 6.25rem; /* Converted from 100px to rem */
+}
+
+.yellow {
+  background-color: #f5a623;
+  padding: 0.625rem 1.5625rem; /* Converted from 10px 25px to rem */
+  border-radius: 3.125rem; /* Converted from 50px to rem */
+}
+
+button:not(.first):not(.yellow) {
+  background-color: #0f0f0f;
+  padding: 0.625rem 1.875rem;
+  border-radius: 3.75rem;
+}
+
+.zero {
+  padding-right: 2rem !important; /* Converted from 120px to rem */
+}
+
+.percentage {
+  padding: 0.9375rem 1.25rem; /* Converted from 15px 20px to rem */
+  border-radius: 5.625rem; /* Converted from 90px to rem */
+}
+
+.dot {
+  padding: 0.9375rem 2.8125rem !important; /* Converted from 15px 45px to rem */
+}
+
+.minus {
+  padding: 0.625rem 1.875rem !important;
+  border-radius: 3.75rem !important;
+}
+
+.result-wrapper {
+  font-size: 1.5rem;
+
+}
