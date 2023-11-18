@@ -23,7 +23,7 @@ function Calculator() {
   const evaluateExpression = () => {
     try {
       const result = eval(expression);
-      setExpression(result);
+      setExpression(result.toString());
     } catch (error) {
       setExpression("Error");
     }
@@ -35,11 +35,7 @@ function Calculator() {
   const handleNegative = () => {
     setExpression("");
     setExpression((prevExpression) => {
-      if (prevExpression.startsWith("-")) {
-        return prevExpression.slice(1);
-      } else {
-        return `-${prevExpression}`;
-      }
+      return `-${prevExpression}`;
     });
   };
 
