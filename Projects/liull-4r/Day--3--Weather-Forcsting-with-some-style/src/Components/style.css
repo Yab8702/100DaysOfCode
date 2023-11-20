@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.head {
+  background-color: #3a3d48;
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+  opacity: 0.8;
+}
+
+input, .btn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  /* caret-color: #3a3d48; */
+  outline: none;
+  margin-right: 0.5rem;
+
+  font-size: 1.5rem;
+  width: 30rem;
+
+  text-align: center;
+  background-color: #3a3d48;
+  color: white;
+  opacity: 0.5;
+}
+.btn {
+  width: 10rem;
+}
+
+body {
+  background-image: url(../../public/tt.png);
+}
+
+p {
+  font-size: 2rem;
+}
+button{
+border: none;
+outline: none;
+cursor: auto;
+background-color: #4A4D59;
+font-size: 2rem;
+padding: 4rem;
+margin: 2rem;
+
+
+}

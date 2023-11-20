@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import "./style.css";
+
 const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState("");
   const [city, setCity] = useState("Addis Ababa");
   const [searchCity, setSearchCity] = useState("");
 
-  const apiKey = "YOUR_API_KEY_HERE"; // Replace with your OpenWeatherMap API key
+  const apiKey = "your_api_key"; // Replace with your OpenWeatherMap API key
 
   const fetchWeatherData = async (cityName) => {
     try {
@@ -13,6 +15,7 @@ const WeatherApp = () => {
       );
       const data = await response.json();
       setWeatherData(data);
+      console.log(data);
     } catch (error) {
       console.log("Error fetching weather data: ", error);
       setWeatherData("");
@@ -29,19 +32,26 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Weather Forecast</h1>
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="input-group mb-3">
+    <div>
+      <h1 className="head">Online Weather Forecast App</h1>
+      <div className="text-center">
+        <div>
+          <div>
             <input
               type="text"
-              className="form-control"
-              placeholder="Enter city"
+              placeholder="Search city"
               onChange={(e) => setSearchCity(e.target.value)}
             />
             <button
-              className="btn btn-primary"
+              className="btn"
+              style={{
+                padding: "1rem",
+                marginLeft: "1rem",
+                backgroundColor: "blue",
+                color: "white",
+                border: "none",
+                borderRadius: "4px",
+              }}
               type="button"
               onClick={handleSearch}
             >
@@ -51,38 +61,48 @@ const WeatherApp = () => {
         </div>
       </div>
       {weatherData && weatherData.weather && weatherData.weather.length > 0 ? (
-        <div className="card">
-          <div className="card-body">
-            <p className="card-text">Country:{weatherData.sys.country}</p>
-            <h2 className="card-title">{weatherData.name}</h2>
-            <p className="card-text">{weatherData.weather[0].description}</p>
-            <p className="card-text">
+        <div className="text-center ">
+          <div className="first">
+            <button className="country">
+              Country:{weatherData.sys.country}
+            </button>
+            <button className="city"> City:{weatherData.name}</button>
+            <button className="description">
+              Description:{weatherData.weather[0].description}
+            </button>
+          </div>
+          <div className="second">
+            <button className="temp">
               Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}°C
-            </p>
-            <p className="card-text">Humidity: {weatherData.main.humidity}%</p>
-            <p className="card-text">
+            </button>
+            <button className="humidity">
+              Humidity: {weatherData.main.humidity}%
+            </button>
+            <button className="pressure">
               Pressure: {weatherData.main.pressure} hPa
-            </p>
-            <p className="card-text">
+            </button>
+          </div>
+          <div className="third">
+            <button className="wind">
               Wind Speed: {weatherData.wind.speed} m/s
-            </p>
-            <p className="card-text">
+            </button>
+            <button className="visibility">
               Visibility: {weatherData.visibility / 1000} km
-            </p>
-            <p className="card-text">
-              Sunrise:{" "}
+            </button>
+            <button className="sunrise">
+              Sunrise:
               {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}
-            </p>
-            <p className="card-text">
-              Sunset:{" "}
+            </button>
+            <button className="sunset">
+              Sunset:
               {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}
-            </p>
+            </button>
           </div>
         </div>
       ) : (
-        <p className="text-center">No weather data available</p>
+        <p className="none">No weather data available</p>
       )}
-      {!weatherData && <p className="text-center">Loading...</p>}
+      {!weatherData && <p className="loading">Loading...</p>}
     </div>
   );
 };
